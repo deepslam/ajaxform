@@ -46,3 +46,11 @@ validate_options must be JavaScript object with follow properties:
 		   etc
 	   }
 	}
+
+Validate options array is optional.
+You can use HTML attributes prefix and pattern in your form.
+There is only one element - name. You can specify it in data-name attribute.
+
+Example:
+
+	<input type="text" value="" data-name="Your name" pattern="[a-Z]+" required />
