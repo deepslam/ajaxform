@@ -11,19 +11,6 @@ This plugin provides follow functions:
 
 Plugin expects that response will be in JSON.
 
-# AjaxForm - Lightweight jQuery AJAX form plugin.
-
-<a href="http://ivanovdmitry.com/" target="_blank">Plugin official page</a>
-
-## About
-
-This plugin provides follow functions:
-
-* Validate data before submit
-* Useful event model
-
-Plugin expects that response will be in JSON.
-
 The plugin is an ideal solution for creating feedback, survey and other forms.
 
 The plugin doesn't support file uploading.
@@ -93,7 +80,7 @@ Example:
 ```javascript
     var validate_options = {
        ...
-       'secretkey': '<secretkey>',
+       'secretkey': 'secretkey',
        ...
     }
 ```
@@ -117,36 +104,36 @@ This function automatically cleans all user data in the form. Usually, it can be
 
 There are some useful event in the plugin:
 
-#### onBeforeSend(<plugin instance>)
+#### onBeforeSend(plugin instance)
 
 This event is triggered before sending a form.
 As a parameter, this function receives a link to the plugin instance.
 
-#### onSent(<plugin instance>, <response>)
+#### onSent(plugin instance, response)
 
 Final event when a form has been sent.
 As the first parameter, this function receives a link to the plugin instance.
 As second parameter this function receives server response.
 
-#### onSending(<plugin instance>)
+#### onSending(plugin instance)
 
 This event is called before data check and send. You can use it to add preloader in your form (for example).
 As a parameter, this function receives a link to the plugin instance.
 
-#### onValidationFailed(<plugin instance>)
+#### onValidationFailed(plugin instance)
 
 A common event that data checking hasn't been successfully completed.
 There were errors found while checking data.
 As a parameter, this function receives a link to the plugin instance.
 
-#### onValidationFieldError(<plugin instance>,<selector>,<field from config>)
+#### onValidationFieldError(plugin instance,selector,field from config)
 
 This event is called when there is an error while field data checking.
 The first parameter is a link to the plugin instance.
 The second parameter is element selector.
 The third parameter is a row from config array about this field.
 
-#### onFailSend(<plugin instance>,<error>)
+#### onFailSend(plugin instance,error)
 
 This is a common event that sending was failed.
 As the first parameter, this function receives a link to the plugin instance.
